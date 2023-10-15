@@ -144,6 +144,10 @@ const FormAdvancedForm = () => {
       dataIndex: 'vul_level',
       hideInForm: true,
       valueEnum: {
+          0: {
+          text: '无风险',
+          status: 'None',
+          },
           1: {
           text: '低危',
           status: 'Success',
@@ -456,6 +460,7 @@ const FormAdvancedForm = () => {
                 { label: '高危', value: '3' },
                 { label: '中危', value: '2' },
                 { label: '低危', value: '1' },
+                { label: '无风险', value: '0' },
               ]}
               rules={[
                 {

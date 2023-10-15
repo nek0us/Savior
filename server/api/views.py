@@ -182,6 +182,8 @@ def vuls_download(request):
             ws.write(row_num, 8, '中危')
         elif int(row.vul_level) == 3:
             ws.write(row_num, 8, '高危')
+        elif int(row.vul_level) == 0:
+            ws.write(row_num, 8, '无风险')
         ws.write(row_num, 9, row.vul_url)
         if int(row.vul_status) == 0:
             ws.write(row_num, 10, '新发现')

@@ -15,7 +15,7 @@ RUN sed -i 's/\/etc\/supervisor\/conf.d\/\*.conf/\/Savior\/docker\/supervisor-ap
 # install requirement
 COPY . /Savior
 COPY docker/savior.conf /etc/nginx/sites-enabled
-RUN pip3 install -r /Savior/requirements.txt -i http://pypi.doubanio.com/simple --trusted-host pypi.doubanio.com
+RUN pip3 install -r /Savior/requirements.txt -i https://mirrors.cloud.tencent.com/pypi/simple --trusted-host mirrors.cloud.tencent.com
 
 WORKDIR /Savior/
 

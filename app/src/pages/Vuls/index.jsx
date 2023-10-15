@@ -96,6 +96,10 @@ const TableList = () => {
       filters: true,
       onFilter: true,
       valueEnum: {
+          0: {
+          text: '无风险',
+          status: 'None',
+          },
           1: {
           text: '低危',
           status: 'Success',

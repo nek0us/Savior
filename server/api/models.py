@@ -51,6 +51,7 @@ class Vul(models.Model):
     vul_name = models.CharField(max_length=100, blank=True, default='')   #漏洞名称，关联漏洞整改建议
     vul_url = models.CharField(max_length=100, blank=True, default='')  #漏洞地址
     sevullevel = (
+        ('0','无风险'),
         ('1','低危'),
         ('2','中危'),
         ('3','高危'),
