@@ -9,11 +9,10 @@
 
  </div>
  
-## 重要更新，修复nginx配置错误导致任意文件读取。
+## 主要修改
 
-进入容器内，修改/etc/nginx/sites-enabled/savior.conf文件如下：
-
-https://github.com/Mustard404/Savior/blob/b72151d6adaa9bf12e284198e0b0b11fb80d6341/docker/savior.conf#L27-L29 
+1. 添加 “无风险” 漏洞等级，以作为工作量
+2. 添加按漏洞等级自动排序
 
 感谢[signfind](https://github.com/signfind)反馈。
 

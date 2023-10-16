@@ -106,7 +106,10 @@ class ReportViewSet(viewsets.ModelViewSet):
             
         #正向项目模板
         project_template= Project.objects.values_list("project_template", flat=True).get(project_center=data["report_center"])
-        
+        # 对 "vuls" 列表按 "vul_level" 从大到小排序
+        sorted_vuls = sorted(data["vuls"], key=lambda x: int(x["vul_level"]), reverse=True)
+        # 更新原始数据中的 "vuls" 属性
+        data["vuls"] = sorted_vuls
         #执行自动生成报告
         auto_report(data, project_template)
         for i in range(0, len(request.data["vuls"])):
